@@ -1,1 +1,2 @@
-Tai suteikia daug paprastumo, skirtingas environment runina tapatį image. Net ir kurimo fazej sukurtas image, gali būt lengvai testuoajamas bei deployinamas. Taip pat kiekvienas pipeline turi savo stage, tai jeigu ką galima lengvai rollbackint.
+Tai suteikia daug paprastumo, skirtingas environment runina tapatį image. Net ir kurimo fazej sukurtas image, gali būt lengvai testuoajamas bei deployinamas. 
+Taip pat kiekvienas pipeline turi savo stage, tai jeigu ką galima lengvai rollbackint.
