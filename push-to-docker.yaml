@@ -33,7 +33,7 @@ jobs:
       - name: Build nad push docker image
         uses: mr-smithers-excellent/docker-build-push@v4
         with:
-          image: azeimis/darbas1
+          image: azeimis/ndarbas1:latest
           registry: docker.io
           username: ${{ secrets.DOCKER_HUB_USERNAME }}
           password: ${{ secrets.DOCKER_HUB_PASSWORD }}
