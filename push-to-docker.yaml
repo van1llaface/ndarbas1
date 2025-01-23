@@ -31,7 +31,7 @@ jobs:
 
       # Runs a set of commands using the runners shell
       - name: Build nad push docker image
-        uses: mr-smithers-excellent/docker-build-push@v4
+        uses: docker/build-push-action@v4
         with:
           image: azeimis/ndarbas1:latest
           registry: docker.io
