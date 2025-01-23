@@ -1,0 +1,4 @@
+Artefaktai užtikriną viso CI/cd veikimą skladžiai. 
+Jie nustato konkrečią versiją.
+Tinkamas versijas yra lengva įtraukti į diegimo procesą.
+Taip pat jie padeda ateityje, jeigu reikėtų rollback daryti.
