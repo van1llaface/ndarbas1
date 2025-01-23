@@ -29,11 +29,14 @@ jobs:
       - name: Run a one-line script
         run: echo Hello, world!
 
-      # Runs a set of commands using the runners shell
-      - name: Build nad push docker image
+      # Runs a set of commands using the runner's shell
+      - name: Build and push Docker image
         uses: docker/build-push-action@v4
         with:
-          image: azeimis/ndarbas1:latest
+          context: .
+          file: ./Dockerfile
+          push: true
+          tags: azeimis/ndarbas1:latest
           registry: docker.io
           username: ${{ secrets.DOCKER_HUB_USERNAME }}
           password: ${{ secrets.DOCKER_HUB_PASSWORD }}
