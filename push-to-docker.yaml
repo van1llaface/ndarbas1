@@ -31,7 +31,11 @@ jobs:
 
       # Runs a set of commands using the runners shell
       - name: Build nad push docker image
-        run: |
-          docker build -t ${{ secrets.DOCKER_HUB_USERNAME }}/ndarbas1:latest .
-          docker login -u ${{ secrets.DOCKER_HUB_USERNAME }} -p ${{ secrets.DOCKER_HUB_PASSWORD }}
-          docker push ${{ secrets.DOCKER_HUB_USERNAME }}/ndarbas1:latest
+        uses: mr-smithers-excellent/docker-build-push@v4
+        with:
+          username: ${{ secrets.DOCKER_HUB_USERNAME }}
+          password: ${{ secrets.DOCKER_HUB_PASSWORD }}
+          repository: azeimis/ndarbas1
+          tags: latest
+          dockerfile: Dockerfile
+          context: .
