@@ -43,5 +43,5 @@ jobs:
 
       - name: Run unit tests
         run: |
-          python -m pytest .\.github\workflows\test_hello.py
+          python -m pytest .github\workflows\test_hello.py
           pytest --maxfail=1 --disable-warnings -q
