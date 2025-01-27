@@ -1,14 +1,14 @@
-# Use the official Node.js image from the Docker Hub
-FROM node:14
+# Use the official Python image from the Docker Hub
+FROM python:3.10-slim
 
-# Create and change to the app directory
+# Set the working directory in the container
 WORKDIR /usr/src/app
 
 # Copy application dependency manifests to the container image
-COPY package*.json ./
+COPY requirements.txt ./
 
 # Install dependencies
-RUN npm install
+RUN pip install --no-cache-dir -r requirements.txt
 
 # Copy the local code to the container image
 COPY . .
@@ -17,4 +17,4 @@ COPY . .
 EXPOSE 8080
 
 # Run the web service on container startup
-CMD ["node", "app.js"]
+CMD ["python", "hello.py"]
