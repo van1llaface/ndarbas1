@@ -3,7 +3,7 @@ Unit tests for the hello module.
 """
 
 import unittest
-from ..hello import say_hello
+from hello import say_hello
 
 class TestHello(unittest.TestCase):
     """Tests for the say_hello function."""
