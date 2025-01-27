@@ -42,6 +42,4 @@ jobs:
           pip install -r requirements.txt
 
       - name: Run unit tests
-        run: |
-          python -m pytest .github/workflows/test_hello.py
-          pytest --maxfail=1 --disable-warnings -q
+        run: pytest .github/workflows/test_hello.py --maxfail=1 --disable-warnings -v
